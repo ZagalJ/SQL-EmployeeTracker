@@ -21,7 +21,6 @@ const db = mysql.createConnection(
   },
   
   console.log(`Connected to the employee_db database.`),
-  console.log(`Welcome to the Employee Management System (EMS)`)
 
 );
 
