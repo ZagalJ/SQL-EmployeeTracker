@@ -14,33 +14,50 @@ function main(){
     message: "What would you like to do?",
     choices: [
       {
-        name: "",
-        value: ""
+        name: "View all departments",
+        value: "VIEWDPT"
       },
       {
-        name: "",
-        value: ""
+        name: "View all roles",
+        value: "VIEWROL"
       },
       {
-        name: "",
-        value: ""
+        name: "View all employees",
+        value: "VIEWEMP"
       },
       {
-        name: "",
-        value: ""
+        name: "Add a department",
+        value: "ADDDPT"
       },
       {
-        name: "",
-        value: ""
+        name: "Add a role",
+        value: "ADDROL"
       },
       {
-        name: "",
-        value: ""
+        name: "Add employee",
+        value: "ADDEMP"
       },
       {
-        name: "",
-        value: ""
+        name: "Update employee role",
+        value: "UPDEMP"
       }
     ]
-  }])
+  }]).then(({selection}) => {
+    if (selection === "VIEWDPT"){
+      viewDpt();
+    } else if ( selection === "VIEWROL"){
+      viewRol();
+    } else if ( selection === "VIEWEMP"){
+      viewEmp();
+    } else if ( selection === "ADDDPT"){
+      addDpt();
+    } else if ( selection === "ADDROL"){
+      addRol();
+    } else if ( selection === "ADDEMP"){
+      addEmp();
+    } else if ( selection === "UPDEMP"){
+      updEmp();
+    } 
+  });
 };
+
