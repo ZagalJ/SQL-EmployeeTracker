@@ -61,3 +61,17 @@ function main(){
   });
 };
 
+//view dpt function
+function viewDpt() {
+  console.log("Selecting all departments...\n");
+  connection.query("SELECT id AS `ID`, department AS `Department` FROM departments", function (err, res) {
+  if (err) throw err;
+  console.table(res);
+  });
+  }
+//view role function
+//view employee function
+//add department function
+//add role function 
+//add employee function
+//update employee function
