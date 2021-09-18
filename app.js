@@ -64,12 +64,21 @@ function main(){
 //view dpt function
 function viewDpt() {
   console.log("Selecting all departments...\n");
-  connection.query("SELECT id AS `ID`, department AS `Department` FROM departments", function (err, res) {
-  if (err) throw err;
-  console.table(res);
-  });
-  }
+    connection.query("SELECT id AS `ID`, department AS `Department` FROM departments", function (err, res) {
+      if (err) throw err;
+        console.table(res);
+    });
+}
+
 //view role function
+function viewRol() {
+  console.log("Selecting all roles...\n");
+    connection.query("SELECT title AS `Title`, salary AS `Salary`, depId AS `Department Id` FROM roles", function (err, res) {
+      if (err) throw err;
+        console.table(res);
+    });
+}
+
 //view employee function
 //add department function
 //add role function 
