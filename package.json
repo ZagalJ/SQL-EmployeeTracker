@@ -5,12 +5,15 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1",
-    "mysql2": "^2.3.0"
+    "inquirer": "^8.1.5",
+    "mysql2": "^2.3.0",
+    "node": "^16.9.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js ",
+    "dev": "node server.js "
   },
   "repository": {
     "type": "git",

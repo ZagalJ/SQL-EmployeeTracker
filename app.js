@@ -1,5 +1,6 @@
 let inquirer = require ("inquirer");
-
+const fs = require('fs');
+const connection = require ('./server')
 init ();
 
 function init() {
@@ -42,20 +43,21 @@ function main(){
         value: "UPDEMP"
       }
     ]
-  }]).then(({selection}) => {
-    if (selection === "VIEWDPT"){
+  }]).then(({firstSelection}) => {
+    // console.log(firstSelection);
+    if (firstSelection === "VIEWDPT"){
       viewDpt();
-    } else if ( selection === "VIEWROL"){
+    } else if ( firstSelection === "VIEWROL"){
       viewRol();
-    } else if ( selection === "VIEWEMP"){
+    } else if ( firstSelection === "VIEWEMP"){
       viewEmp();
-    } else if ( selection === "ADDDPT"){
+    } else if ( firstSelection === "ADDDPT"){
       addDpt();
-    } else if ( selection === "ADDROL"){
+    } else if ( firstSelection === "ADDROL"){
       addRol();
-    } else if ( selection === "ADDEMP"){
+    } else if ( firstSelection === "ADDEMP"){
       addEmp();
-    } else if ( selection === "UPDEMP"){
+    } else if ( firstSelection === "UPDEMP"){
       updEmp();
     } 
   });
@@ -67,19 +69,32 @@ function viewDpt() {
     connection.query("SELECT id AS `ID`, department AS `Department` FROM departments", function (err, res) {
       if (err) throw err;
         console.table(res);
+        console.log("test, empty")
+        main();
     });
 }
 
 //view role function
 function viewRol() {
   console.log("Selecting all roles...\n");
-    connection.query("SELECT title AS `Title`, salary AS `Salary`, depId AS `Department Id` FROM roles", function (err, res) {
+    connection.query("SELECT title AS `Title`, salary AS `Salary`, department_id AS `Department Id` FROM roles", function (err, res) {
       if (err) throw err;
         console.table(res);
+        console.log("test, empty")
+        main();
     });
 }
 
 //view employee function
+function viewEmp() {
+  console.log("Selecting all the employees...\n");
+    connection.query("SELECT first_name AS `First Name`, last_name AS `Last Name`, role_id AS `Role ID` FROM employee", function (err, res) {
+      if (err) throw err;
+        console.table(res);        
+        console.log("test, empty")
+        main();
+    });
+}
 //add department function
 //add role function 
 //add employee function
