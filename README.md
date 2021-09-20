@@ -15,7 +15,7 @@ This is a content management system application that allows users to view and ma
 * [Questions](#questions)
 
 ## Installation
-npm i && npm start
+npm i 
 
 ## Usage
 npm start
