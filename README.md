@@ -23,6 +23,8 @@ npm start
 ![Application being used.”](./Assets/sc.png)
 ![Application being used.”](./Assets/sc2.png)
 
+[Link to the video of the app deployed](https://drive.google.com/file/d/1GuP3Ome-sxmDxCkdz7uo26qUqy6Cdf8n/view)
+
 ## Contributions
 Thanks to some software engineer friends that helped me with this application.
 
