@@ -2,6 +2,7 @@ let inquirer = require ("inquirer");
 const fs = require('fs');
 const connection = require ('./server')
 const cTable = require('console.table');
+const { exit } = require("process");
 
 init ();
 
@@ -43,7 +44,12 @@ function main(){
       {
         name: "Update employee role",
         value: "UPDEMP"
+      },
+      {
+        name: "Close the application",
+        value: "exit"
       }
+
     ]
   }]).then(({firstSelection}) => {
     // console.log(firstSelection);
@@ -62,6 +68,10 @@ function main(){
     } else if ( firstSelection === "UPDEMP"){
       updEmp();
     } 
+    else{
+      console.log("Goodbye!");
+      process.exit();
+    }
   });
 };
 

@@ -1,4 +1,4 @@
-# Employee Tracker
+	# Employee Tracker
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -19,6 +19,9 @@ npm i
 
 ## Usage
 npm start
+
+![Application being used.”](./Assets/sc.png)
+![Application being used.”](./Assets/sc2.png)
 
 ## Contributions
 Thanks to some software engineer friends that helped me with this application.
